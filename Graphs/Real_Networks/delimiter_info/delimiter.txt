@@ -1,0 +1,8 @@
+p2p-Gnutella30.txt	tab
+p2p-Gnutella31.txt	tab
+soc-Slashdot0811.txt	tab
+email-Eu-core.txt	space
+facebook_combined.txt	space
+HR_edges.csv	,
+HU_edges.csv	,
+RO_edges.csv	,
