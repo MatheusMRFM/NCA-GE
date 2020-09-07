@@ -394,6 +394,7 @@ class Graph():
 		if not os.path.exists(folder + "Metadata/" + sub_folder):
 			os.makedirs(folder + "Metadata/" + sub_folder)
 		
+		self.degree = [val for (node, val) in self.graph.degree()]
 		name = folder + "Metadata/" + sub_folder + str(id) + "_metadata.dat"
 		f = open(name, "w")
 		print(name, " opened")
@@ -553,6 +554,7 @@ class Graph():
 	#---------------------------------------------------------------------------
 	def save_file(self, id, folder, sub_folder):
 		name = folder + sub_folder + str(id) + ".gexf"
+		os.makedirs(folder + sub_folder, exist_ok=True)
 		nx.write_gexf(self.graph, name)
 		self.write_meta_data(id, folder, sub_folder)
 

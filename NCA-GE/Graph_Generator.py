@@ -22,10 +22,10 @@ TEST    = 1
 """
 Variables that control how the graphs are generated
 """
-NUM_TRAIN_GRAPH		= 0
-NUM_TEST_GRAPH		= 100
+NUM_TRAIN_GRAPH		= 600
+NUM_TEST_GRAPH		= 10
 
-GRAPH_TYPE 			= 3
+GRAPH_TYPE 			= 1
 MAX_NODES			= 1000
 MIN_NODES			= 100
 MAX_P				= 0.8
@@ -46,7 +46,7 @@ class Graph_Generator():
 	def __init__(self, id, num_worker):
 		self.num_worker = num_worker
 		self.tid = id
-		self.folder_name = "./Graphs/"
+		self.folder_name = "../Graphs/"
 
 	#---------------------------------------------------------------------------
 	def generate_set(self, mode):
@@ -58,7 +58,7 @@ class Graph_Generator():
 			sub_folder = "Train/"
 		else:
 			NUM_IT = int(NUM_TEST_GRAPH/self.num_worker)
-			sub_folder = "Test_4/"
+			sub_folder = "Test/"
 
 		graph = Graph()
 
@@ -102,7 +102,7 @@ class Graph_Generator():
 
 	#---------------------------------------------------------------------------
 	def run_graph_generator(self):
-		#self.generate_set(TRAIN)
+		self.generate_set(TRAIN)
 		self.generate_set(TEST)
 
 

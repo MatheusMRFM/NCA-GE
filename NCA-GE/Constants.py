@@ -28,12 +28,12 @@ General variables
 """
 LOAD            = False
 MODE            = TRAIN    #REAL_NET
-CENTRALITY      = HARMONIC
+CENTRALITY      = CLOSE
 
 NUM_WORKER      = 1
 SAVE_NETWORK    = True
 SAVER_INTERVAL  = 25
-USE_GPU         = True
+USE_GPU         = False
 
 MAX_STEPS       = 7e6
 TEST_NUM        = 0
